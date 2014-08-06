@@ -7,11 +7,11 @@ pageone = re.compile(r'\nPage 1\n\n')
 newline = re.compile(r'\n')
 quotes = re.compile(r'\"\,\.')
 
-newdir = "/Users/nbloom/Desktop/fccfilings"
+newdir = "PATH TO YOUR FOLDER"
 if not os.path.exists(newdir):
     os.makedirs(newdir)
 
-tree = ET.parse('/Users/nbloom/Downloads/14-28-RAW-Solr-2.xml')
+tree = ET.parse('PATH TO XML FILE')
 root = tree.getroot()
 result = root[1]
 

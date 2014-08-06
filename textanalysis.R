@@ -6,7 +6,7 @@ library('dplyr')
 library('igraph')
 
 # Make Corpus
-fcc<-Corpus(DirSource("/Users/nbloom/Desktop/fccfilings",encoding="UTF-8"), readerControl = list(language = "lat"))
+fcc<-Corpus(DirSource("PATH TO FOLDER WITH TEXT FILES",encoding="UTF-8"), readerControl = list(language = "lat"))
 fcc <- tm_map(fcc, tolower)
 
 # Remove stopwords
@@ -16,7 +16,7 @@ fcctm <- tm_map(fcc, removeWords, stopwords("en"))
 fcctm<- DocumentTermMatrix(fcctm)
 
 # If you want to de-sparsify it:
-fcctm.sp<-removeSparseTerms(fcctm, 0.8)
+fcctm.sp<-removeSparseTerms(fcctm, 0.85)
 
 
 
